@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minecraft Server Hosting</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="hamburger" onclick="toggleMenu()" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="#home" onclick="navigate('home')">Domů</a></li>
+      <li><a href="#pricing" onclick="navigate('pricing')">Ceník</a></li>
+      <li><a href="#specs" onclick="navigate('specs')">Specifikace</a></li>
+      <li><a href="#contact" onclick="navigate('contact')">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <main class="content" id="content">
+    <section id="home" class="page active home-centered">
+      <h1 class="main-title">Ultros Hosting®</h1>
+      <img src="https://wallpaperaccess.com/full/196488.jpg" alt="Minecraft" class="main-image-large" />
+      <p>Stabilní, rychlý a prémiový hosting ověřený sta-tísíci uživately po celém světě pro váš Minecraft server.</p>
+      <button onclick="openModal()">Založit server</button>
+    </section>
+
+    <section id="pricing" class="page">
+      <h2>Ceník/ceny uváděni za měsíc</h2>
+      <ul class="price-list">
+        <img src="https://static.vecteezy.com/system/resources/previews/028/533/680/non_2x/premium-quality-gold-medal-with-transparent-background-free-png.png" alt="Ceník hosting" class="pricing-image" />
+        <li><strong>LowEnd</strong> – 49 Kč/měsíc (500 MB RAM, 4 sloty)</li>
+        <li><strong>Low</strong> – 99 Kč/měsíc (1,5 GB RAM, 10 slotů)</li>
+        <li><strong>LowHigh</strong> – 189 Kč/měsíc (3,2 GB RAM, 12 slotů)</li>
+        <li><strong>MediumLow</strong> – 279 Kč/měsíc (6,6 GB RAM, 16 slotů)</li>
+        <li><strong>Medium</strong> – 369 Kč/měsíc (8 GB RAM, 40 slotů)</li>
+        <li><strong>MediumHigh</strong> – 459 Kč/měsíc (12 GB RAM, 60 slotů)</li>
+        <li><strong>ProLow</strong> – 549 Kč/měsíc (14 GB RAM, 65 slotů)</li>
+        <li><strong>Pro</strong> – 639 Kč/měsíc (16 GB RAM, 70 slotů)</li>
+        <li><strong>ProHigh</strong> – 729 Kč/měsíc (24 GB RAM, 100 slotů)</li>
+      </ul>
+    </section>
+
+    <section id="specs" class="page">
+      <h2>Specifikace</h2>
+      <ul class="spec-list">
+        <img src="https://www.gsoft.es/wp-content/uploads/2024/05/server-racks-computer-network-security-server-room-data-center-d-render-dark-blue-generative-ai-scaled.jpg" alt="Ceník hosting" class="pricing-image" />
+        <li>Ryzen 9 CPU 100x</li>
+        <li>1240 GB DDR4 RAM</li>
+        <li>NVMe SSD 700TB</li>
+        <li>200 Gbps připojení</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="page">
+      <h2>Kontakt</h2>
+      <p>Máš dotaz nebo potřebuješ pomoc? Napiš nám:</p>
+      <p><strong>Email:</strong> WeDontCare@AboutYourProblem.com</p>
+      <p><strong>Discord:</strong> discord.gg/We-Dont-Care-AboutYour-Problem</p>
+    </section>
+  </main>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3>Parametry serveru</h3>
+      <form id="orderForm">
+        <label>Vyberte si váš plán:
+          <select id="planSelect" required>
+            <option value="49">LowEnd 49Kč</option>
+            <option value="99">Low 99Kč</option>
+            <option value="189">LowHigh 189Kč</option>
+            <option value="279">MediumLow 279Kč</option>
+            <option value="369">Medium 369Kč</option>
+            <option value="459">MediumHigh 459Kč</option>
+            <option value="549">ProLow 549Kč</option>
+            <option value="639">Pro 639Kč</option>
+            <option value="729">ProHigh 729Kč</option>
+          </select>
+        </label>
+        <label>Počet Měsíců k předplacení:
+          <input type="number" min="1" max="120" id="monthsInput" required />
+        </label>
+        <label>Typ hry:
+          <select required>
+            <option>Survival</option>
+            <option>Creative</option>
+            <option>Adventure</option>
+            <option>Own</option>
+          </select>
+        </label>
+        <button type="submit">Vytvořit Objednávku</button>
+      </form>
+      <div id="paymentDetails" class="payment-details"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
