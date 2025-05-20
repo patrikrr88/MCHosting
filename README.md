@@ -4,12 +4,13 @@ Ultros Hosting® je webová prezentace pro Minecraft server hosting. Obsahuje se
 
 Note: Web je pouze vizualní minecraft hosting nikoliv skutečný.
 
+
 ---
 
 ## Funkce
 
 - Plně responzivní design
-- Navigace přes hamburger menu
+- Navigace přes animované hamburger menu
 - Interaktivní sekce: Domů, Ceník, Specifikace, Kontakt
 - Zobrazení údajů o platbě(včetně výpočtu ceny)
 
